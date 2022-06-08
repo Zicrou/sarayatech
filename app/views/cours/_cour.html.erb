@@ -9,4 +9,19 @@
     <%= cour.content %>
   </p>
 
+  <p>
+    <strong>Video:</strong>
+    <%= video_tag url_for(cour.video), controls: true if cour.video.attached?%>
+  </p>
+
+  <p>
+    <strong>Thumbnail:</strong>
+    <%= image_tag url_for(cour.thumbnail.representation(resize_to_limit: [500, 500])) if cour.thumbnail.representable?%>
+  </p>
+
+  <p>
+    <strong>Video:</strong>
+    <%= video_tag url_for(cour.video), controls: true if cour.video.attached?%>
+  </p>
+
 </div>

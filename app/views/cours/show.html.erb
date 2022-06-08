@@ -1,6 +1,32 @@
+<link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+
 <p style="color: green"><%= notice %></p>
 
 <%= render @cour %>
+
+<div class=col-md-4>
+  <video
+id="my-video"
+class="video-js"
+controls
+height= "350"
+width="640"
+preload="auto"
+poster="<% if @cour.thumbnail.present? %><%= url_for(@cour.thumbnail) %><% end %>"
+data-setup='{"fluid": true}'
+>
+  <source src="<% if @cour.video.present? %>
+  <%= url_for(@cour.video) %><% end %>" type="video/mp4" />
+  <p class="vjs-no-js">
+  To view this video please enable JavaScript, and consider upgrading to a
+  web browser that
+  <a href="https://videojs.com/html5-video-support/" target="_blank"
+  >supports HTML5 video</a
+  >
+</p>
+</video>
+</div>
 
 <div>
   <%= link_to "Edit this cour", edit_cour_path(@cour) %> |
