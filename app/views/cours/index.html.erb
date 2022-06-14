@@ -12,3 +12,24 @@
 </div>
 
 <%= link_to "New cour", new_cour_path %>
+
+
+<div class="card text-center col-md-11">
+  <div class="card-header">
+    TITLE
+  </div>
+  <div class="card-body row">
+    <div class="col-md-5 " style="">
+      <%= video_tag url_for(@cours.first.video) %>
+      <%#= image_tag url_for(@cours.first.thumbnail.representation(resize_to_limit: [900, 200])) %>
+    </div>
+    <div class="col-md-4">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>

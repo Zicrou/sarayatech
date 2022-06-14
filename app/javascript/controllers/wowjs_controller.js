@@ -1,8 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
 
+// Connects to data-controller="wowjs"
 export default class extends Controller {
     connect() {
-        $(".owl-carousel").owlCarousel();
-        this.element.textContent = "Hello World!"
+        new WOW().init();
     }
 }

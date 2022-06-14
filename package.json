@@ -9,9 +9,11 @@
         "bootstrap": "^5.1.3",
         "bootstrap-icons": "^1.8.3",
         "esbuild": "^0.14.42",
+        "owl.carousel": "^2.3.4",
         "sass": "^1.52.2",
         "trix": "^2.0.0-beta.0",
-        "uikit": "^3.14.3"
+        "uikit": "^3.14.3",
+        "wowjs": "^1.1.3"
     },
     "scripts": {
         "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
