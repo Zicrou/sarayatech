@@ -7,5 +7,8 @@ import { application } from "./application"
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
 
+import OwlCarousselController from "./owl_caroussel_controller.js"
+application.register("owl-caroussel", OwlCarousselController)
+
 import WowjsController from "./wowjs_controller.js"
 application.register("wowjs", WowjsController)
