@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>People</h1>
+
+<div class="row" style="margin:5rem;">
+  <div id="people" class="d-flex justify-content-around">
+    <% @people.each do |person| %>
+      <%#= render person %>
+      <div class="card mb-3 col-md-2" style="margin:1rem;" id="<%= dom_id person %>">
+        <div class="card-header">
+          <h4 class="card-title"><strong><%= person.type_person %></strong></h4>
+        </div>
+        <div class="card-body">
+          <h5 class="card-subtitle mb-2 text-muted">TYPE OF PERSON</h5>
+          <p class="card-text"><%#= studysession.description%></p>
+          <%= link_to "Show this studysession", person,  class:"card-link text-success" %>
+        </div>
+      </div>
+        
+    <% end %>
+  </div>
+</div>
+
+<%= link_to "New person", new_person_path, class:"btn btn-outline-success ms-5" %>
