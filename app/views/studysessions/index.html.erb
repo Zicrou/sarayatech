@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= link_to "New Study session", new_studysession_path %></h1>
+
+<div id="studysessions">
+  <div class="row" style="margin:5rem;">
+    <% @studysessions.each do |studysession| %>
+      <%= render studysession %>
+    <% end %>
+  </div>
+</div>
+
+
+<!-- <div class="row">
+  <div class="card border-success mb-3 col-md-3" style="">
+  <div class="card-header bg-transparent border-success">Header</div>
+  <div class="card-body text-success">
+    <h5 class="card-title">Success card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <div class="card-footer bg-transparent border-success">Footer</div>
+</div>
+<div class="card border-success mb-3 col-md-3" style="">
+  <div class="card-header bg-transparent border-success">Header</div>
+  <div class="card-body text-success">
+    <h5 class="card-title">Success card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <div class="card-footer bg-transparent border-success">Footer</div>
+</div>
+</div> -->

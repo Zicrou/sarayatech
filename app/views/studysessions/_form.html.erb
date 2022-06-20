@@ -1,0 +1,27 @@
+<%= form_with(model: studysession) do |form| %>
+  <% if studysession.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(studysession.errors.count, "error") %> prohibited this studysession from being saved:</h2>
+
+      <ul>
+        <% studysession.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :duration, style: "display: block" %>
+    <%= form.number_field :duration %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :content, style: "display: block" %>
+    <%= form.rich_text_area :description %>
+  </div>
+<br>
+  <div class="form-group">
+    <%= form.submit class:"btn btn-success" %>
+  </div>
+<% end %>
